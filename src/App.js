@@ -3,10 +3,12 @@ import Header from './components/Header';
 import { items } from './items';
 import './App.css';
 
+const storeName = 'Grudging Sales';
+
 function App() {
   return (
     <div className="App">
-      <Header />
+      <Header title={storeName} />
       <Home items={items} />
     </div>
   );
