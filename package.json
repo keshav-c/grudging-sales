@@ -25,7 +25,20 @@
       "react-app/jest",
       "airbnb",
       "airbnb/hooks"
-    ]
+    ],
+    "rules": {
+      "react/react-in-jsx-scope": "off",
+      "react/jsx-filename-extension": [
+        "warn",
+        {
+          "extensions": [
+            ".js",
+            ".jsx"
+          ]
+        }
+      ],
+      "no-console": "off"
+    }
   },
   "browserslist": {
     "production": [
