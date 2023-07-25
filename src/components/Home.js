@@ -18,7 +18,14 @@ function Home({ items }) {
 }
 
 Home.propTypes = {
-  items: PropTypes.arrayOf(Thumbnail).isRequired,
+  items: PropTypes.arrayOf(PropTypes.shape({
+    itemId: PropTypes.string.isRequired,
+    imageId: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired,
+    description: PropTypes.string,
+    salePrice: PropTypes.number,
+  })).isRequired,
 };
 
 export default Home;
