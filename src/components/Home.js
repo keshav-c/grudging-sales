@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types';
 import Thumbnail from './Thumbnail';
+import { itemImages } from '../items';
 import './Home.css';
 
-function Home({ items, itemImages }) {
+function Home({ items }) {
   return (
     <div className="home-component">
       {items.map(({ itemId, imageId, title }) => (
@@ -18,7 +19,6 @@ function Home({ items, itemImages }) {
 
 Home.propTypes = {
   items: PropTypes.arrayOf(Thumbnail).isRequired,
-  itemImages: PropTypes.objectOf(PropTypes.string).isRequired,
 };
 
 export default Home;
