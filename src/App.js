@@ -1,19 +1,11 @@
-import './App.css';
-import Header from './components/Header';
-import Thumbnail from './components/Thumbnail';
+import Home from './components/Home';
 import { items, itemImages } from './items';
+import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      {items.map(({ itemId, imageId, title }) => (
-        <Thumbnail
-          key={itemId}
-          image={itemImages[imageId]}
-          title={title}
-        />
-      ))}
+      <Home items={items} itemImages={itemImages} />
     </div>
   );
 }
