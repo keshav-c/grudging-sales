@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import Thumbnail from './Thumbnail';
+import ItemType from '../types/item';
 import { itemImages } from '../items';
 import './Home.css';
 
@@ -18,14 +19,7 @@ function Home({ items }) {
 }
 
 Home.propTypes = {
-  items: PropTypes.arrayOf(PropTypes.shape({
-    itemId: PropTypes.string.isRequired,
-    imageId: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-    price: PropTypes.number.isRequired,
-    description: PropTypes.string,
-    salePrice: PropTypes.number,
-  })).isRequired,
+  items: PropTypes.arrayOf(ItemType).isRequired,
 };
 
 export default Home;
