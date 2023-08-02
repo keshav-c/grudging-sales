@@ -5,6 +5,7 @@ import Home from './components/Home';
 import Header from './components/Header';
 import Details from './components/Details';
 import DetailItem from './components/DetailItem';
+import Reward from './components/Reward';
 import NotFound from './components/NotFound';
 
 const storeName = 'Grudging Sales';
@@ -25,6 +26,7 @@ function App() {
           <Route path=":id" element={<DetailItem />} />
           <Route index element={<div>None Selected</div>} />
         </Route>
+        <Route path="/rewards/:tier" element={<Reward />} />
         <Route path="/" element={<Home items={items} />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
