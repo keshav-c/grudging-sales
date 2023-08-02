@@ -20,7 +20,9 @@ function App() {
     <Router>
       <Header title={storeName} />
       <Routes>
-        <Route path="/details" element={<Details items={items} />} />
+        <Route path="/details" element={<Details items={items} />}>
+          <Route path=":id" element={<div>Detail item</div>} />
+        </Route>
         <Route path="/" element={<Home items={items} />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
