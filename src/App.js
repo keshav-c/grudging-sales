@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './components/Home';
 import Header from './components/Header';
 import Details from './components/Details';
+import DetailItem from './components/DetailItem';
 import NotFound from './components/NotFound';
 
 const storeName = 'Grudging Sales';
@@ -21,7 +22,8 @@ function App() {
       <Header title={storeName} />
       <Routes>
         <Route path="/details" element={<Details items={items} />}>
-          <Route path=":id" element={<div>Detail item</div>} />
+          <Route path=":id" element={<DetailItem />} />
+          <Route index element={<div>None Selected</div>} />
         </Route>
         <Route path="/" element={<Home items={items} />} />
         <Route path="*" element={<NotFound />} />
