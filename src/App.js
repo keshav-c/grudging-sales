@@ -19,6 +19,7 @@ function App() {
       <Header title={storeName} />
       <Routes>
         <Route path="/" element={<Home items={items} />} />
+        <Route path="*" element={<div>Page Not Found</div>} />
       </Routes>
     </Router>
   );
