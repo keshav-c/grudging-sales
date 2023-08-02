@@ -12,6 +12,7 @@ function Home({ items }) {
           key={itemId}
           image={itemImages[imageId]}
           title={title}
+          itemId={itemId}
         />
       ))}
     </div>
