@@ -1,9 +1,11 @@
 .header-component {
   display: flex;
-  align-items: center;
-  padding: 0 20px;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
   margin-bottom: 10px;
   box-shadow: 0px 10px 15px rgba(57, 52, 52, 0.2);
+  padding: 0 20px;
 }
 
 .header-component img {
@@ -20,16 +22,71 @@
 }
 
 .header-component p {
-  color: #d20dcf
+  color: #831010
+}
+
+.header-component a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.header-component .menu {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+}
+
+.header-component .menu a {
+  position: relative;
+  text-decoration: underline;
+  font-size: 24px;
+  color: #831010
+}
+
+.header-component .menu img {
+  height: 40px;
+  width: 40px;
+}
+
+.header-component .menu a>img {
+  margin-right: 8px;
+}
+
+.header-component .menu .badge {
+  position: absolute;
+  height: 18px;
+  width: 18px;
+  border-radius: 100%;
+  font-size: 12px;
+  background-color: #880a0a;
+  color: #ffffff;
+  font-weight: normal;
+  right: 2px;
+  top: calc(50%-22px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media (min-width: 768px) {
   .header-component {
+    flex-direction: row;
+    align-items: center;
     padding: 0 50px;
   }
 
   .header-component img {
     height: 60px;
     width: 60px;
+  }
+
+  .header-component .menu {
+    width: auto;
+    flex-grow: 1;
+    height: 100%;
+    margin: 0;
   }
 }
