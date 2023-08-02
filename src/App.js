@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './components/Home';
 import Header from './components/Header';
+import Details from './components/Details';
 import NotFound from './components/NotFound';
 
 const storeName = 'Grudging Sales';
@@ -19,6 +20,7 @@ function App() {
     <Router>
       <Header title={storeName} />
       <Routes>
+        <Route path="/details" element={<Details items={items} />} />
         <Route path="/" element={<Home items={items} />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
